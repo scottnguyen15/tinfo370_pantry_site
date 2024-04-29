@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Work in progress.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UW Pantry Interface</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>UWT Pantry</h1>
+    </div>
+
+    <div class="container">
+        <button class="button long">Database</button>
+    </div>
+
+    <div class="container">
+        <button id="checkin" class="button circle">Check-in</button>
+        <button class="button circle">Check-out</button>
+        <button class="button circle">Order-in</button>
+    </div>
+
+    <div class="container">
+        <button id="logout" class="button long">Logout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Work in Progress | 4/25/2024</p>
+    </footer>
+
+    <script>
+        document.getElementById("checkin").addEventListener("click", function() {
+            window.location.href = "checkin.html";
+        });
+        
+        document.getElementById("logout").addEventListener("click", function() {
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
