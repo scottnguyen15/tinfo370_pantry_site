@@ -11,3 +11,5 @@ Scott:
 - Added font integration for Encode Sans and Open Sans using Google Fonts' embed feature.
 - Added a hover color for the buttons on the index (home) page.
 - Fixed an error where clicking 'Asian' in the check-in form would send the page up. This error came from a mislabeling of the 'id=asian', where I had accidentally left it as 'id=yes'.
+- Added the folders for css, js, and imgs to the GitHub repo.
+- Updated the footer date from 4/25/2024 to 5/1/2024.
