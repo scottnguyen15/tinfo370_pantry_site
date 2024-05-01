@@ -1,0 +1,75 @@
+.header {
+	background: #4b2e83;
+	overflow: hidden;
+  	padding: 12px;
+}
+
+h1 {
+	color: white;
+	font-family: 'Encode Sans', sans-serif;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .input {
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+}
+
+.input input {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+.btn {
+	padding: 10px 20px;
+}
+
+.button {
+  background-color: #4b2e83;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover{
+	background-color: #b7a57a;
+}
+
+.container {
+	display: flex;
+    justify-content: center;
+}
+
+.long {
+	border-radius: 4px;
+}
+
+.circle {
+	border-radius: 80%;
+}
+
+footer {
+	text-align: center;
+  	padding: 20px;
+  	overflow: hidden;
+  	background: #4b2e83;
+  	color: white;
+}
