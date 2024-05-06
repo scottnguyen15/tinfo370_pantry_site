@@ -6,7 +6,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
     <meta charset="UTF-8">
     <meta name="description" content="Work in progress.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,8 +24,8 @@
 
     <div class="container">
         <button id="checkin" class="button circle">Check-in</button>
-        <button class="button circle">Check-out</button>
-        <button class="button circle">Order-in</button>
+        <button id="checkout" class="button circle">Check-out</button>
+        <button id="orderin" class="button circle">Order-in</button>
     </div>
 
     <div class="container">
@@ -36,11 +36,19 @@
     <footer>
         <p>Work in Progress | 5/1/2024</p>
     </footer>
-
-    <script>
+	
+	<script>
         document.getElementById("checkin").addEventListener("click", function() {
             window.location.href = "checkin.html";
         });
+		
+		document.getElementById("checkout").addEventListener("click", function() {
+			window.location.href = "checkout.html";
+		});
+
+		document.getElementById("orderin").addEventListener("click", function() {
+			window.location.href = "orderin.html";
+		});
         
         document.getElementById("logout").addEventListener("click", function() {
             window.location.href = "login.html";
