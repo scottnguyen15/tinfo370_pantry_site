@@ -11,6 +11,9 @@ h1 {
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 .login {
@@ -69,7 +72,21 @@ body {
 footer {
 	text-align: center;
   	padding: 20px;
+	width: 100%;
   	overflow: hidden;
   	background: #4b2e83;
+	min-height: 50px;
   	color: white;
+	bottom: 0;
+}
+
+/* Check-in Section - This hides the Yes & No sections until either is chosen.*/
+.hidden {
+	display: none;
+}
+
+/* Check-in Section - This displays a section based on 'Yes' or No'.*/
+#yes:checked ~ #returning-user,
+#no:checked ~ #new-user {
+	display: block;
 }
