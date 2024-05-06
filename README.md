@@ -7,6 +7,7 @@ Scott:
 
 5/1/2024
 
+
 Scott:
 - Added font integration for Encode Sans and Open Sans using Google Fonts' embed feature.
 - Added a hover color for the buttons on the index (home) page.
