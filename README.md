@@ -19,3 +19,11 @@ Scott:
 Scott:
 - Coded a method for the check-in page that hides the survey sections until the user has chosen 'yes' or 'no'. This was accomplished through making div sections for returning users and new users, then handling the visibility in the css.
 - Created the pages for check-out and order-in. Every form has now been imported to the website interface!
+
+5/7/2024
+
+Gavin:
+- Integrated Database into checkin.html forum (both yes and no)
+- Made sure any null values aren't included in data
+- Made sure every field must be filled in before submission
+- Maintained integrity of Scott's deisgn
