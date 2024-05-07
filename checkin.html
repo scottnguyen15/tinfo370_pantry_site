@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <script src="js/scripts.js"></script>
-	<meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
     <meta name="description" content="Work in progress.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UW Pantry Interface</title>
@@ -19,7 +18,7 @@
     </div>
 
     <div class="container">
-        <form>
+        <form id="userForm">
             <!-- Initial Question -->
             <h2>Have you visited the Pantry before the 2023-2024 academic year?</h2>
             <input type="radio" id="yes" name="visit_before" value="Yes">
@@ -29,75 +28,77 @@
 
             <!-- Yes Section -->
             <div id="returning-user" class="hidden">
-				<h2>YES, I have visited the Pantry before the 2023-2024 academic year.</h2>
+                <h2>YES, I have visited the Pantry before the 2023-2024 academic year.</h2>
             
-				<h3>Student Full Name</h3>
-				<input type="text" id="stu-name" name="stu-name" required><br><br>
-				<h3>Student ID Number</h3>
-				<input type="text" id="stu-id" name="stu-id" required><br><br>
-				<h3>If the Pantry could be open for more hours, what days and hours would you like it to be open?</h3>
-				<input type="text" id="stu-schedule" name="stu-schedule" required><br><br>
-			</div>
+                <h3>Student Full Name</h3>
+                <input type="text" id="stu-name" name="stu-name" required><br><br>
+                <h3>Student ID Number</h3>
+                <input type="text" id="stu-id" name="stu-id" required><br><br>
+                <h3>If the Pantry could be open for more hours, what days and hours would you like it to be open?</h3>
+                <input type="text" id="stu-schedule" name="stu-schedule" required><br><br>
+            </div>
 
             <!-- No Section -->
-			<div id="new-user" class="hidden">
-				<h2>NO previous visits - Pantry User Registration</h2>
-				<h4>Registration of all student users of the pantry that have not visited previous to the 2023-2024 academic year.</h4>
-				
-				<h3>Student First and Last Name</h3>
-				<input type="text" id="stu-name" name="stu-name" required><br><br>
-				<h3>Student ID Number</h3>
-				<input type="text" id="stu-id" name="stu-id" required><br><br>
-				<h3>NetID - UW E-mail</h3>
-				<input type="text" id="stu-email" name="stu-email" required><br><br>
+            <div id="new-user" class="hidden">
+                <h2>NO previous visits - Pantry User Registration</h2>
+                <h4>Registration of all student users of the pantry that have not visited previous to the 2023-2024 academic year.</h4>
+                
+                <h3>Student First and Last Name</h3>
+                <input type="text" id="new-stu-name" name="stu-name" required><br><br>
+                <h3>Student ID Number</h3>
+                <input type="text" id="new-stu-id" name="stu-id" required><br><br>
+                <h3>NetID - UW E-mail</h3>
+                <input type="text" id="stu-email" name="stu-email" required><br><br>
 
-				<h3>Ethnic Identity - Please self-identify</h3>
-				<input type="radio" id="aboriginal" name="race" value="aboriginal">
-				<label for="aboriginal">Aboriginal</label><br>
-				<input type="radio" id="black" name="race" value="black">
-				<label for="black">African American or Black</label><br>
-				<input type="radio" id="asian" name="race" value="asian">
-				<label for="asian">Asian</label><br>
-				<input type="radio" id="white" name="race" value="white">
-				<label for="white">European American or Caucasian</label><br>
-				<input type="radio" id="native" name="race" value="native">
-				<label for="native">Native American</label><br>
-				<input type="radio" id="islander" name="race" value="islander">
-				<label for="islander">Pacific Islander</label><br>
-				<input type="radio" id="spanish" name="race" value="spanish">
-				<label for="spanish">Latin American or Hispanic</label><br>
-				<input type="radio" id="other" name="race" value="other">
-				<label for="other">Other</label><br>
+                <h3>Ethnic Identity - Please self-identify</h3>
+                <input type="radio" id="aboriginal" name="race" value="aboriginal">
+                <label for="aboriginal">Aboriginal</label><br>
+                <input type="radio" id="black" name="race" value="black">
+                <label for="black">African American or Black</label><br>
+                <input type="radio" id="asian" name="race" value="asian">
+                <label for="asian">Asian</label><br>
+                <input type="radio" id="white" name="race" value="white">
+                <label for="white">European American or Caucasian</label><br>
+                <input type="radio" id="native" name="race" value="native">
+                <label for="native">Native American</label><br>
+                <input type="radio" id="islander" name="race" value="islander">
+                <label for="islander">Pacific Islander</label><br>
+                <input type="radio" id="spanish" name="race" value="spanish">
+                <label for="spanish">Latin American or Hispanic</label><br>
+                <input type="radio" id="other" name="race" value="other">
+                <label for="other">Other</label><br>
 
-				<h3>Gender Identity</h3>
-				<input type="radio" id="woman" name="gender" value="woman">
-				<label for="woman">Woman</label><br>
-				<input type="radio" id="man" name="gender" value="man">
-				<label for="man">Man</label><br>
-				<input type="radio" id="nb" name="gender" value="nb">
-				<label for="nb">Non-binary</label><br>
-				<input type="radio" id="nopref" name="gender" value="nopref">
-				<label for="nopref">Prefer not to say</label><br>
+                <h3>Gender Identity</h3>
+                <input type="radio" id="woman" name="gender" value="woman">
+                <label for="woman">Woman</label><br>
+                <input type="radio" id="man" name="gender" value="man">
+                <label for="man">Man</label><br>
+                <input type="radio" id="nb" name="gender" value="nb">
+                <label for="nb">Non-binary</label><br>
+                <input type="radio" id="nopref" name="gender" value="nopref">
+                <label for="nopref">Prefer not to say</label><br>
 
-				<h3>How many people, including yourself, are in your household?</h3>
-				<input type="text" id="stu-house" name="stu-house" required><br><br>
+                <h3>How many people, including yourself, are in your household?</h3>
+                <input type="text" id="stu-house" name="stu-house" required><br><br>
 
 				<h3>How did you hear about the pantry? Check all that apply.</h3>
-				<input type="checkbox" id="social" name="hearing" value="social">
-				<label for="social">Social Media (IG, FB, TT, etc.)</label><br>
-				<input type="checkbox" id="faculty" name="hearing" value="faculty">
-				<label for="faculty">Faculty or Staff Member</label><br>
-				<input type="checkbox" id="student" name="hearing" value="student">
-				<label for="student">Student Peers</label><br>
-				<input type="checkbox" id="flyer" name="hearing" value="flyer">
-				<label for="flyer">Flyers</label><br>
-				<input type="checkbox" id="tour" name="hearing" value="tour">
-				<label for="tour">Campus Tour</label><br>
-				<input type="checkbox" id="orient" name="hearing" value="orient">
-				<label for="orient">Orientation</label><br>
-				<input type="checkbox" id="other2" name="hearing" value="other2">
-				<label for="other2">Other</label><br>
-			</div>
+				<div id="discovery-options">
+					<input type="checkbox" id="social" name="hearing" value="social">
+					<label for="social">Social Media (IG, FB, TT, etc.)</label><br>
+					<input type="checkbox" id="faculty" name="hearing" value="faculty">
+					<label for="faculty">Faculty or Staff Member</label><br>
+					<input type="checkbox" id="student" name="hearing" value="student">
+					<label for="student">Student Peers</label><br>
+					<input type="checkbox" id="flyer" name="hearing" value="flyer">
+					<label for="flyer">Flyers</label><br>
+					<input type="checkbox" id="tour" name="hearing" value="tour">
+					<label for="tour">Campus Tour</label><br>
+					<input type="checkbox" id="orient" name="hearing" value="orient">
+					<label for="orient">Orientation</label><br>
+					<input type="checkbox" id="other2" name="hearing" value="other2">
+					<label for="other2">Other</label><br>
+				</div>																	
+            </div>
 
             <button type="submit" class="btn">Submit</button>
             <button id="backBtn" class="btn">Back</button>
@@ -108,8 +109,9 @@
     <footer>
         <p>Work in Progress | 5/1/2024</p>
     </footer>
-	
-	<script>
+
+    <script src="js/formhandler.js" type="module"></script>
+    <script>
         document.getElementById("backBtn").addEventListener("click", function() {
             window.location.href = "index.html";
         });
