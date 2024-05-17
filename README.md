@@ -27,3 +27,10 @@ Gavin:
 - Made sure any null values aren't included in data
 - Made sure every field must be filled in before submission
 - Maintained integrity of Scott's deisgn
+
+5/16/2024
+
+Leo:
+- Checked and reviewed all of the website code making sure there are no errors.
+- Made slight adjustments to the design, making sure everything is spaced nicely.
+- Added placeholder text inside every single text box to improve style.
