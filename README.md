@@ -33,4 +33,6 @@ Gavin:
 Leo:
 - Checked and reviewed all of the website code making sure there are no errors.
 - Made slight adjustments to the design, making sure everything is spaced nicely.
+- Added/removed some spacing in between the Login/Bypass and the Submit/Back buttons.
 - Added placeholder text inside every single text box to improve style.
+- Italicized the top text in each form to not confuse anyone answering the form.
