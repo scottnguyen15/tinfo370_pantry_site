@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="js/checkout.js" type="module"></script>
+	<meta charset="UTF-8">
+    <meta name="description" content="Work in progress.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UW Pantry Interface</title>
+</head>
+<body>
+	<!-- Header -->
+	<div class="header">
+        <h1>UWT Pantry</h1>
+    </div>
+	
+	<div class="container">
+		<form>
+			<h2>Pantry Check-Out 2023-2024</h2>
+			<h3>Weight Out for ALL items in the pantry.</h3>
+			<p>Record all Student Check-outs and record all damaged items being removed from the Pantry.</p>
+			
+			<h3>Weight in Pounds</h3>
+			<input type="text" id="item-weight" name="item-weight" required><br>
+			
+			<h3>Number of FOOD items checked out</h3>
+			<input type="text" id="num-of-foods" name="num-of-foods" required><br>
+			
+			<h3>Number of TOILETRIES - HYGIENE items checked out</h3>
+			<input type="text" id="num-of-toiletries" name="num-of-toiletries" required><br>
+			
+			<h3>Checkout Source</h3>
+			<input type="radio" id="student" name="source" value="student" required>
+			<label for="student">Student</label><br>
+			<input type="radio" id="damaged" name="source" value="damaged">
+			<label for="damaged">Damaged or Spoiled</label><br>
+			<input type="radio" id="expired" name="source" value="expired">
+			<label for="expired">Expired</label><br>
+			<input type="radio" id="compromised" name="source" value="compromised">
+			<label for="compromised">Compromised (open or torn)</label><br>
+			
+			<button type="submit" class="btn">Submit</button>
+			<button id="backBtn" class="btn">Back</button>
+		</form>
+	</div>
+	
+	<!-- Footer -->
+    <footer>
+        <p>Work in Progress | 5/1/2024</p>
+    </footer>
+	
+	<script>
+        document.getElementById("backBtn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
