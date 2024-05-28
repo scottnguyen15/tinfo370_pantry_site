@@ -51,3 +51,22 @@ Leo:
 - Edited the footer.
 - Created two different button types, one for the index page and one for everything else to make them look clean.
 - Added a transition effect to the buttons to make them look nicer when hovering over them.
+
+5/28/2024
+
+Gavin:
+- Implemented proper authentication system through Firebase
+- Created auth-check.js to perform auth checks
+- Users are now unable to enter form.html links into searchbar to bypass login (redirects)
+- Swapped index.html and checkin.html code to ensure proper navigation flow
+- Renamed checkin.html to home.html to avoid confusion
+- Renamed and rerouted multiple js files for clarity
+- Renamed checkout and checkin forms to keep our naming schemes consistent
+- Cleaned up checkin form fields
+- Forced users to enter uw.edu specific emails before submitting
+- Forced users to enter numbers in studentid fields
+- Added submission messages for checkout & orderin forms
+- Forced users to only submit numbers on both forms
+- Fixed issue where hitting the back button after a failed submission would display the message twice
+- Removed database button due to security issues and out of scope/knowledge
+- Removed bypass button due to Firebase auth making it obsolete
