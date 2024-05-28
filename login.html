@@ -10,6 +10,46 @@
     <meta name="description" content="Work in progress.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UW Pantry Login</title>
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDvfXs-2I3aEaO2jeCp8adyVnlOazPzyCY",
+            authDomain: "pantry-a6783.firebaseapp.com",
+            projectId: "pantry-a6783",
+            storageBucket: "pantry-a6783.appspot.com",
+            messagingSenderId: "511092628867",
+            appId: "1:511092628867:web:7119204ad20d2b6bd26ab6",
+            measurementId: "G-KV8KB6R6QP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("uw-id").value;
+            const password = document.getElementById("password").value;
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    document.getElementById("error-message").textContent = errorMessage;
+                });
+        });
+
+        document.getElementById("bypassBtn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -18,7 +58,7 @@
     </div>
 
     <div class="login">
-        <form>
+        <form id="login-form">
             <div class="input">
                 <label for="uw-id">UW Net ID</label>
                 <input type="text" id="uw-id" placeholder="UW Net ID" required>
@@ -29,7 +69,7 @@
             </div>
             <button type="submit" class="btn">Login</button>
             <button id="bypassBtn" type="button" class="btn">Bypass</button>
-            <p> </p>
+            <p id="error-message" style="color:red;"></p>
         </form>
     </div>
 
@@ -37,11 +77,5 @@
     <footer>
         <p>Created by Data Palate | 5/1/2024</p>
     </footer>
-
-    <script>
-        document.getElementById("bypassBtn").addEventListener("click", function() {
-            window.location.href = "index.html";
-        });
-    </script>
 </body>
 </html>
