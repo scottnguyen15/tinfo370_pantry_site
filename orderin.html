@@ -2,56 +2,55 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="js/scripts.js"></script>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="description" content="Work in progress.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UW Pantry Interface</title>
 </head>
 <body>
-	<!-- Header -->
-	<div class="header">
-        <h1>UWT Pantry</h1>
+    <!-- Header -->
+    <div class="header">
+        <h1>UWT Pantry Order-In</h1>
     </div>
-	
-	<div class="container">
-		<form>
-			<h2>Pantry Order-In</h2>
-			<h3><i>ALL ORDER AND DONATIONS MUST BE WEIGHED PRIOR TO SUBMITTING</i></h3>
-			<p><i>Record all deliveries and donations.</i></p>
-			
-			<h3>Weight in Pounds</h3>
-			<input type="text" id="item-weight" name="item-weight" placeholder="Enter your answer" required><br>
-			
-			<h3>Number of items received (Costco by case, donations individually)</h3>
-			<input type="text" id="item-received" name="item-received" placeholder="Enter your answer" required><br>
-			
-			<h3>Order Source</h3>
-			<input type="radio" id="costco" name="source" value="costco" required>
-			<label for="costco">Costco</label><br>
-			<input type="radio" id="donate" name="source" value="donate">
-			<label for="donate">Donation</label><br>
-			<input type="radio" id="partner" name="source" value="partner">
-			<label for="partner">Pantry Partner</label><br>
-			
-			<p> </p>
-			<button type="submit" class="btn">Submit</button>
-			<button id="backBtn" class="btn">Back</button>
-			<p>	</p>
-		</form>
-	</div>
-	
-	<!-- Footer -->
+
+    <div class="container">
+        <form>
+            <h2>Pantry Order-In</h2>
+            <h3><i>ALL ORDER AND DONATIONS MUST BE WEIGHED PRIOR TO SUBMITTING</i></h3>
+            <p><i>Record all deliveries and donations.</i></p>
+
+            <h3>Weight in Pounds</h3>
+            <input type="text" id="item-weight" name="item-weight" placeholder="Enter your answer" required><br>
+
+            <h3>Number of items received (Costco by case, donations individually)</h3>
+            <input type="text" id="item-received" name="item-received" placeholder="Enter your answer" required><br>
+
+            <h3>Order Source</h3>
+            <input type="radio" id="costco" name="source" value="costco" required>
+            <label for="costco">Costco</label><br>
+            <input type="radio" id="donate" name="source" value="donate">
+            <label for="donate">Donation</label><br>
+            <input type="radio" id="partner" name="source" value="partner">
+            <label for="partner">Pantry Partner</label><br>
+
+            <p> </p>
+            <button type="submit" class="btn">Submit</button>
+            <button id="backBtn" class="btn">Back</button>
+            <p> </p>
+        </form>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>Work in Progress | 5/1/2024</p>
+        <p>Created by Data Palate | 5/1/2024</p>
     </footer>
-	
-	<script src="js/orderinhandler.js" type="module"></script>
-	<script>
+
+    <script>
         document.getElementById("backBtn").addEventListener("click", function() {
             window.location.href = "index.html";
         });
