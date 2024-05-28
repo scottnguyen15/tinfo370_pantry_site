@@ -47,12 +47,6 @@
                     document.getElementById("error-message").textContent = errorMessage;
                 });
         });
-
-        document.getElementById("bypassBtn").addEventListener("click", function() {
-            const params = new URLSearchParams(window.location.search);
-            const redirectTo = params.get('redirectTo') || 'home.html';
-            window.location.href = redirectTo;
-        });
     </script>
 </head>
 <body>
@@ -72,7 +66,6 @@
                 <input type="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit" class="btn">Login</button>
-            <button id="bypassBtn" type="button" class="btn">Bypass</button>
             <p id="error-message" style="color:red;"></p>
         </form>
     </div>
