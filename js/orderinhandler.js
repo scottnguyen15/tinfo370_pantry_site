@@ -63,7 +63,7 @@ const handleFormSubmit = async (event) => {
             source: source,
             timestamp: serverTimestamp()
         });
-        console.log("Order submitted successfully!");
+        console.log("Form submitted successfully!");
 
         // Set the form submission flag to true only after a successful submission
         isFormSubmitted = true;
