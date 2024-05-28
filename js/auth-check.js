@@ -1,8 +1,8 @@
-// Import the functions you need from the SDKs you need
+// Import Firebase functions
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
-// Your web app's Firebase configuration
+// Firebase Config
 const firebaseConfig = {
     apiKey: "AIzaSyDvfXs-2I3aEaO2jeCp8adyVnlOazPzyCY",
     authDomain: "pantry-a6783.firebaseapp.com",
