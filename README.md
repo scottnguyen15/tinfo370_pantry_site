@@ -36,3 +36,18 @@ Leo:
 - Added/removed some spacing in between the Login/Bypass and the Submit/Back buttons.
 - Added placeholder text inside every single text box to improve style.
 - Italicized the top text in each form to not confuse anyone answering the form.
+
+5/27/2024
+
+Leo:
+- Changed the check-in page to be the default page.
+- Added a login button at the top right of the check-in page to access all the other pages.
+- Improved the design of the check-in page by adding a logo at the top left and spaced everything properly.
+- Fixed an issue in the check-in page that would display the Yes/No options before the buttons were pressed.
+- Improved the visuals of the login page.
+- Improved the visuals of the index page by ensuring all of the buttons were the same size.
+- Updated the header for every page to have better organization and cleanliness.
+- Fixed the error that had the footer and header have different a different width.
+- Edited the footer.
+- Created two different button types, one for the index page and one for everything else to make them look clean.
+- Added a transition effect to the buttons to make them look nicer when hovering over them.
