@@ -14,7 +14,11 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <div class="logo">
+            <img src="imgs/logos/logogold.png" alt="Logo">
+        </div>
         <h1>UWT Pantry</h1>
+        <button id="loginBtn" class="btn small">Login</button>
     </div>
 
     <div class="container">
@@ -28,7 +32,7 @@
 
             <!-- Yes Section -->
             <div id="returning-user" class="hidden">
-                <h2>YES, I have visited the Pantry before the 2023-2024 academic year.</h2>
+                <h2><i>YES, I have visited the Pantry before the 2023-2024 academic year.</i></h2>
             
                 <h3>Student Full Name</h3>
                 <input type="text" id="stu-name" name="stu-name" placeholder="Enter your answer" required><br><br>
@@ -81,41 +85,40 @@
                 <h3>How many people, including yourself, are in your household?</h3>
                 <input type="text" id="stu-house" name="stu-house" placeholder="Enter your answer" required><br><br>
 
-				<h3>How did you hear about the pantry? Check all that apply.</h3>
-				<div id="discovery-options">
-					<input type="checkbox" id="social" name="hearing" value="social">
-					<label for="social">Social Media (IG, FB, TT, etc.)</label><br>
-					<input type="checkbox" id="faculty" name="hearing" value="faculty">
-					<label for="faculty">Faculty or Staff Member</label><br>
-					<input type="checkbox" id="student" name="hearing" value="student">
-					<label for="student">Student Peers</label><br>
-					<input type="checkbox" id="flyer" name="hearing" value="flyer">
-					<label for="flyer">Flyers</label><br>
-					<input type="checkbox" id="tour" name="hearing" value="tour">
-					<label for="tour">Campus Tour</label><br>
-					<input type="checkbox" id="orient" name="hearing" value="orient">
-					<label for="orient">Orientation</label><br>
-					<input type="checkbox" id="other2" name="hearing" value="other2">
-					<label for="other2">Other</label><br>
-				</div>																	
+                <h3>How did you hear about the pantry? Check all that apply.</h3>
+                <div id="discovery-options">
+                    <input type="checkbox" id="social" name="hearing" value="social">
+                    <label for="social">Social Media (IG, FB, TT, etc.)</label><br>
+                    <input type="checkbox" id="faculty" name="hearing" value="faculty">
+                    <label for="faculty">Faculty or Staff Member</label><br>
+                    <input type="checkbox" id="student" name="hearing" value="student">
+                    <label for="student">Student Peers</label><br>
+                    <input type="checkbox" id="flyer" name="hearing" value="flyer">
+                    <label for="flyer">Flyers</label><br>
+                    <input type="checkbox" id="tour" name="hearing" value="tour">
+                    <label for="tour">Campus Tour</label><br>
+                    <input type="checkbox" id="orient" name="hearing" value="orient">
+                    <label for="orient">Orientation</label><br>
+                    <input type="checkbox" id="other2" name="hearing" value="other2">
+                    <label for="other2">Other</label><br>
+                </div>
             </div>
             
             <p> </p>
             <button type="submit" class="btn">Submit</button>
-            <button id="backBtn" class="btn">Back</button>
             <p> </p>
         </form>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>Work in Progress | 5/1/2024</p>
+        <p>Created by Data Palate | 5/1/2024</p>
     </footer>
 
     <script src="js/formhandler.js" type="module"></script>
     <script>
-        document.getElementById("backBtn").addEventListener("click", function() {
-            window.location.href = "index.html";
+        document.getElementById("loginBtn").addEventListener("click", function() {
+            window.location.href = "login.html";
         });
     </script>
 </body>
