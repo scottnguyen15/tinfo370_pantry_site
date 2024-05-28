@@ -37,19 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isReturning) {
             returningUserSection.style.display = 'block';
             newUserSection.style.display = 'none';
+            document.getElementById('stu-id').required = true;
+            document.getElementById('new-stu-id').required = false;
         } else {
             returningUserSection.style.display = 'none';
             newUserSection.style.display = 'block';
+            document.getElementById('stu-id').required = false;
+            document.getElementById('new-stu-id').required = true;
         }
-        setInputsRequired(returningUserSection, isReturning);
-        setInputsRequired(newUserSection, !isReturning);
-    }
-
-    function setInputsRequired(section, required) {
-        const inputs = section.querySelectorAll('input[type="text"], input[type="email"], select');
-        inputs.forEach(input => {
-            input.required = required && section.style.display !== 'none';
-        });
     }
 
     form.addEventListener('submit', async (event) => {
@@ -67,15 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (email && !email.endsWith('@uw.edu')) {
             alert('Please enter a valid UW email address ending with @uw.edu');
             return;
-        }
-
-        // Validate student ID fields
-        const studentIDFields = form.querySelectorAll('input[name="stu-id"]');
-        for (const field of studentIDFields) {
-            if (isNaN(field.value) || field.value === '') {
-                alert('Please enter a valid number for the Student ID.');
-                return;
-            }
         }
 
         const formData = collectFormData();
