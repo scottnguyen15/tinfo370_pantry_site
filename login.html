@@ -38,7 +38,9 @@
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed in 
-                    window.location.href = "checkin.html";
+                    const params = new URLSearchParams(window.location.search);
+                    const redirectTo = params.get('redirectTo') || 'home.html';
+                    window.location.href = redirectTo;
                 })
                 .catch((error) => {
                     const errorMessage = error.message;
@@ -47,7 +49,9 @@
         });
 
         document.getElementById("bypassBtn").addEventListener("click", function() {
-            window.location.href = "checkin.html";
+            const params = new URLSearchParams(window.location.search);
+            const redirectTo = params.get('redirectTo') || 'home.html';
+            window.location.href = redirectTo;
         });
     </script>
 </head>
