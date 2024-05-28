@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,6 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
 let isFormSubmitted = false;  // Flag to track form submission
 
@@ -55,7 +57,7 @@ const handleFormSubmit = async (event) => {
 
     try {
         // Add data to Firestore collection
-        const docRef = await addDoc(collection(db, "orders"), {
+        const docRef = await addDoc(collection(db, "orderin"), {
             itemWeight: itemWeight,
             itemReceived: itemReceived,
             source: source,
@@ -89,11 +91,19 @@ const handleBackButtonClick = (event) => {
     window.location.href = "home.html";
 };
 
-// Add event listener to the form for form submission
-document.querySelector('form').addEventListener('submit', handleFormSubmit);
+// Authentication check and attach event listeners
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // Add event listener to the form for form submission
+        document.querySelector('form').addEventListener('submit', handleFormSubmit);
 
-// Add event listener to the back button
-document.getElementById('backBtn').addEventListener('click', handleBackButtonClick);
+        // Add event listener to the back button
+        document.getElementById('backBtn').addEventListener('click', handleBackButtonClick);
+    } else {
+        alert('You must be logged in to submit this form.');
+        window.location.href = 'login.html';
+    }
+});
 
 // Prevent alert when navigating away from the page
 window.addEventListener('beforeunload', (event) => {
