@@ -69,7 +69,7 @@ const handleFormSubmit = async (event) => {
         isFormSubmitted = true;
 
         // Display submission message
-        alert('Order submitted successfully! Document ID: ' + docRef.id);
+        alert('Form submitted successfully! Document ID: ' + docRef.id);
 
         // Reset form after successful submission
         event.target.reset();
