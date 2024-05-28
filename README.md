@@ -71,3 +71,4 @@ Gavin:
 - Removed database button due to security issues and out of scope/knowledge
 - Removed bypass button due to Firebase auth making it obsolete
 - Removed script.js since no one was using it and removed any references in html files
+- Added an extra layer of security through Firebase rules that only let's logged in users submit certain forms
