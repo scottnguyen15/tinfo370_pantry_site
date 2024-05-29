@@ -78,3 +78,4 @@ Jasjot:
 
 Leo:
 - Added a back button in the Login page for users who may have accidentally clicked it.
+- Fixed an issue where clicking the back button would allow users to get past the login.
