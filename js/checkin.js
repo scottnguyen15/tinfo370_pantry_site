@@ -114,4 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return formData;
     }
+
+    // Function to handle back button click in Login page
+const handleBackButtonClick = (event) => {
+    event.preventDefault(); // Prevent the default button behavior
+    // Do not set the form submission flag or show any message
+    isFormSubmitted = false;
+    // Redirect to the home page
+    window.location.href = "index.html";
+};
 });
