@@ -66,6 +66,7 @@
                 <input type="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit" class="btn">Login</button>
+            <button id="backBtn" class="btn">Back</button>
             <p id="error-message" style="color:red;"></p>
         </form>
     </div>
@@ -74,5 +75,13 @@
     <footer>
         <p>Created by Data Palate | 5/1/2024</p>
     </footer>
+
+    <!-- Javascript -->
+    <script src="js/checkout.js" type="module"></script>
+    <script>
+        document.getElementById("backBtn").addEventListener("click", function() {
+            window.location.href = "home.html";
+        });
+    </script>
 </body>
 </html>
