@@ -15,7 +15,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98.45%;
+    width: 99%;
 }
 
 /* Logo Styles */
@@ -37,7 +37,7 @@ footer {
     padding: 12px;
     background: #4b2e83;
     color: white;
-    width: 98.45%;
+    width: 99%;
     flex-shrink: 0;
 }
 
