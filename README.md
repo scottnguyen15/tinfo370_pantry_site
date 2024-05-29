@@ -72,3 +72,6 @@ Gavin:
 - Removed bypass button due to Firebase auth making it obsolete
 - Removed script.js since no one was using it and removed any references in html files
 - Added an extra layer of security through Firebase rules that only let's logged in users submit certain forms
+
+Jasjot:
+- Fixed the footer to stay at the bottom of the page.
