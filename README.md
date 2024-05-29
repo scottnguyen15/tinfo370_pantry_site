@@ -75,6 +75,7 @@ Gavin:
 
 Jasjot:
 - Fixed the footer to stay at the bottom of the page.
+- Fixed issue where buttons and footer would be spaced weirdly.
 
 Leo:
 - Added a back button in the Login page for users who may have accidentally clicked it.
