@@ -1,22 +1,21 @@
 /* General Styles */
-body {
+html, body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: white
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
 .header {
     background: #4b2e83;
-    overflow: hidden;
     padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-	width: 98.45%;
-	height: 40px;
+    width: 100%;
 }
 
 /* Logo Styles */
@@ -38,9 +37,8 @@ footer {
     padding: 12px;
     background: #4b2e83;
     color: white;
-    bottom: 0;
-    width: 98.45%;
-	height: 60px;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 /* Button Styles */
@@ -52,7 +50,7 @@ footer {
     background-color: #4b2e83;
     cursor: pointer;
     transition: background-color 0.3s ease;
-	/* Add fixed width and height */
+    /* Add fixed width and height */
     width: 85px;
     height: 40px;
 }
@@ -63,40 +61,57 @@ footer {
 
 /* Index Buttons */
 .button {
-	background-color: #4b2e83;
-	font-family: 'Open Sans', sans-serif;
-	border: none;
-	color: white;
-	padding: 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-	/* Add fixed width and height */
+    background-color: #4b2e83;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Add fixed width and height */
     width: 130px;
     height: 60px;
-  }
+}
 
-.button:hover{
-	background-color: #b7a57a;
+.button:hover {
+    background-color: #b7a57a;
 }
 
 .long {
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .circle {
-	border-radius: 80%;
+    border-radius: 50%;
 }
 
 /* Container Styles */
 .container {
-	display: flex;
+    display: flex;
     justify-content: center;
-	margin-top: 3px;
+    align-items: center; /* Center items vertically */
+    flex-grow: 1;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px; /* Adjust spacing between buttons if needed */
+    margin-bottom: 20px; /* Space between top buttons and logout button */
+}
+
+.button-container .button {
+    margin: 10px 0;
 }
 
 /* Login Page Styles */
@@ -129,11 +144,11 @@ footer {
 
 /* Check-in Section - This hides the Yes & No sections until either is chosen.*/
 .hidden {
-	display: none;
+    display: none;
 }
 
 /* Check-in Section - This displays a section based on 'Yes' or No'.*/
 #yes:checked ~ #returning-user,
 #no:checked ~ #new-user {
-	display: block;
+    display: block;
 }
